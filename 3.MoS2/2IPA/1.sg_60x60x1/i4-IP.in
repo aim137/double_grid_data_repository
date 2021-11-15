@@ -1,0 +1,46 @@
+#                                                                     
+# :   :::   :::     ::::    ::::  :::::::::   ::::::::                
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+              
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+             
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+             
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+             
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#             
+#    ###  ###     ### ###       ### #########   ########              
+#                                                                     
+#                                                                     
+#        Version 5.1.0 Revision 19984 Hash cc7ae20                    
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+optics                           # [R] Linear Response optical properties
+chi                              # [R][CHI] Dyson equation for Chi.
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+ElecTemp= 0.025852         eV    # Electronic Temperature
+FFTGvecs=  8845            RL    # [FFT] Plane-waves
+Chimod= "IP"                     # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% DipBands
+ 11 | 18 |                           # [DIP] Bands range for dipoles
+%
+% QpntsRXd
+ 1 | 1 |                             # [Xd] Transferred momenta
+%
+% BndsRnXd
+ 11 | 18 |                           # [Xd] Polarization function bands
+%
+% EnRngeXd
+ 0.000000 | 5.000000 |         eV    # [Xd] Energy range
+%
+% DmRngeXd
+ 0.040000 | 0.040000 |         eV    # [Xd] Damping range
+%
+ETStpsXd= 301                    # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 1.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%
+% XfnQP_up_E
+ 1.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters UP (c/v) eV|adim|adim
+%
+% XfnQP_dn_E
+ 1.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters DOWN (c/v) eV|adim|adim
+%

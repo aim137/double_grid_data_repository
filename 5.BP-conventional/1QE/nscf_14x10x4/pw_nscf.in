@@ -1,0 +1,44 @@
+&control
+  calculation = 'nscf',
+  prefix = 'BP',
+  outdir = 'run_output'
+  pseudo_dir = 'PPs',
+  wf_collect=.true.
+  nstep = 200 
+  verbosity = 'high' 
+/
+&system
+  ibrav = 0,
+  nat = 8,
+  ntyp = 1,
+  ecutwfc = 40,
+  nbnd = 100,
+/
+&electrons
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+   diago_thr_init=5.0e-6
+/
+ATOMIC_SPECIES
+ P 30.97  P.pbe-hgh.UPF
+ATOMIC_POSITIONS (crystal)
+P    -0.000000000         0.913483060         0.594493981
+P     0.500000000         0.086516999         0.905506019
+P    -0.000000000         0.413482982         0.905506019
+P     0.500000000         0.586516992         0.594493981
+P     0.500000000         0.913483060         0.094494002
+P    -0.000000000         0.086516999         0.405506019
+P     0.500000000         0.413482982         0.405506019
+P    -0.000000000         0.586516992         0.094494002
+K_POINTS (automatic)
+14 10 4 0 0 0
+CELL_PARAMETERS angstrom
+        3.3061099052         0.0000000000         0.0000000000
+        0.0000000000         4.5524182320         0.0000000000
+        0.0000000000         0.0000000000        11.2211017609

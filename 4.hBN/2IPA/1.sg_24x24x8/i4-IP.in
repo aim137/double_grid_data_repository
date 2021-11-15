@@ -1,0 +1,42 @@
+#                                                                     
+#                                                                     
+# Y88b    /   e           e    e      888~~\    ,88~-_                
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \               
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |              
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |              
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /               
+#    /   /      Y88b /          Y888b 888__/    `88_-~                
+#                                                                     
+#                                                                     
+#       Version 5.1.0 Revision 19984 Hash cc7ae20                     
+#              Branch is devel-double-grid                            
+#                 MPI+SLK+HDF5_IO Build                               
+#               http://www.yambo-code.org                             
+#
+optics                           # [R] Linear Response optical properties
+chi                              # [R][CHI] Dyson equation for Chi.
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+FFTGvecs= 1491             RL    # [FFT] Plane-waves
+Chimod= "IP"                     # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% DipBands
+  1 | 40 |                           # [DIP] Bands range for dipoles
+%
+% QpntsRXd
+ 1 | 1 |                             # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 | 40 |                           # [Xd] Polarization function bands
+%
+% EnRngeXd
+ 4.000000 | 8.000000 |         eV    # [Xd] Energy range
+%
+% DmRngeXd
+ 0.040000 | 0.040000 |         eV    # [Xd] Damping range
+%
+ETStpsXd=  401                   # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%
+% XfnQP_E
+ 1.440000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%

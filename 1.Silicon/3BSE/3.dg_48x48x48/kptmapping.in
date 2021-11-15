@@ -1,0 +1,23 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+#       Version 5.0.0 Revision 19511 Hash 0988128f2                   
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+kpts_map                         # [R] Fine to coarse grid Map
+FineGd_mode= "mixed"             # Fine Grid mode. Symmetry expanded, unexpanded or mixed.
+BZ_DbGd_Nk=0                     # BZ Number of points in the fine grid
+SkipCheck                     # Skip internal consistency check on k-point grids
+#SkipBorderPts                 # Skip points in the Fine Grid that are on the surface of coarse gride smal BZ`s
+%FineGd_DB1_paths                # Paths to the SAVE folders with the Fine Grid DB1
+"/scratch/martin/CALCULATIONS/1.DoubleGridDevelop/1.Silicon/1qe/nscf_48x48x48" |
+%

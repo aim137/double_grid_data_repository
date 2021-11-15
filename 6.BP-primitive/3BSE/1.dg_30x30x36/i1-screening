@@ -1,0 +1,27 @@
+#  __      __   ______   __       __  _______    ______               
+# |  \    /  \ /      \ |  \     /  \|       \  /      \              
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\             
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$             
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$             
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$             
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$             
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$             
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$              
+#                                                                     
+#       Version 5.0.0 Revision 19554 Hash ee4766693                   
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+screen                           # [R] Inverse Dielectric Matrix
+em1s                             # [R][Xs] Statically Screened Interaction
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+Chimod= "HARTREE"                # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% BndsRnXs
+   1 |  50 |                         # [Xs] Polarization function bands
+%
+NGsBlkXs= 4 Ry    # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 1.000000 | 1.000000 |        # [Xs] [cc] Electric Field
+%
+XTermKind= "none"                # [X] X terminator ("none","BG" Bruneval-Gonze)

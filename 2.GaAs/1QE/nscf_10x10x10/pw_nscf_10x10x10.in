@@ -1,0 +1,33 @@
+&control
+    calculation='nscf',
+    restart_mode='from_scratch',
+    prefix='GaAs', 
+    outdir='run_output'
+    pseudo_dir= 'PPs/',
+    verbosity ='high',
+/&end
+ &system
+    ibrav=0,
+    nat=2, 
+    ntyp=2,
+    ecutwfc=70.0,
+    force_symmorphic= .true.,
+    nbnd = 70
+/&end
+ &electrons
+    diago_full_acc=.true.,
+    diago_thr_init=5.0e-6,
+    conv_thr = 1.0d-8
+/&end
+ATOMIC_SPECIES
+As     74.9216  As.pz-bhs.UPF
+Ga     69.723   Ga_hamlu.fhi.UPF
+ATOMIC_POSITIONS angstrom
+Ga           -0.0000000000        0.0000000000        0.0000000000
+As            1.4011853684        4.2035561053        4.2035561053
+K_POINTS automatic
+10 10 10 0 0 0
+CELL_PARAMETERS angstrom
+   0.000000000   2.802370737   2.802370737
+   2.802370737   0.000000000   2.802370737
+   2.802370737   2.802370737  -0.000000000

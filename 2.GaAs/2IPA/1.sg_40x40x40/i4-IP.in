@@ -1,0 +1,50 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+#        Version 5.1.0 Revision 19984 Hash cc7ae20                    
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+optics                           # [R] Linear Response optical properties
+infver                           # [R] Input file variables verbosity
+chi                              # [R][CHI] Dyson equation for Chi.
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+NLogCPUs=0                       # [PARALLEL] Live-timing CPU`s (0 for all)
+FFTGvecs=  3839            RL    # [FFT] Plane-waves
+PAR_def_mode= "memory"         # [PARALLEL] Default distribution mode ("balanced"/"memory"/"workload")
+DIP_CPU= ""                      # [PARALLEL] CPUs for each role
+DIP_ROLEs= ""                    # [PARALLEL] CPUs roles (k,c,v)
+X_CPU= ""                        # [PARALLEL] CPUs for each role
+X_ROLEs= ""                      # [PARALLEL] CPUs roles (q,g,k,c,v)
+X_nCPU_LinAlg_INV=-1             # [PARALLEL] CPUs for Linear Algebra (if -1 it is automatically set)
+Chimod= "IP"                     # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% DipBands
+  1 |  8 |                           # [DIP] Bands range for dipoles
+%
+% QpntsRXd
+ 1 | 1 |                             # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 |  8 |                           # [Xd] Polarization function bands
+%
+% EnRngeXd
+ 1.000000 | 6.000000 |         eV    # [Xd] Energy range
+%
+% DmRngeXd
+ 0.040000 | 0.040000 |         eV    # [Xd] Damping range
+%
+ETStpsXd= 251                    # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 1.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%
+% XfnQP_E
+ 0.900000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%

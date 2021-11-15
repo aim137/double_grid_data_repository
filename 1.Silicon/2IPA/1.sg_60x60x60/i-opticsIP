@@ -1,0 +1,38 @@
+#                                                                     
+#  **    **    **     ****     ****  ******     *******               
+# //**  **    ****   /**/**   **/** /*////**   **/////**              
+#  //****    **//**  /**//** ** /** /*   /**  **     //**             
+#   //**    **  //** /** //***  /** /******  /**      /**             
+#    /**   **********/**  //*   /** /*//// **/**      /**             
+#    /**  /**//////**/**   /    /** /*    /**//**     **              
+#    /**  /**     /**/**        /** /*******  //*******               
+#    //   //      // //         //  ///////    ///////                
+#                                                                     
+#       Version 5.0.0 Revision 19554 Hash ee4766693                   
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+optics                           # [R] Linear Response optical properties
+chi                              # [R][CHI] Dyson equation for Chi.
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+Chimod= "IP"                     # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% QpntsRXd
+ 1 | 1 |                             # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 | 8 |                           # [Xd] Polarization function bands
+%
+% EnRngeXd
+ 2.000000 | 6.000000 |         eV    # [Xd] Energy range
+%
+% DmRngeXd
+ 0.040000 | 0.040000 |         eV    # [Xd] Damping range
+%
+ETStpsXd=  800                   # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 1.000000 | 1.000000 |        # [Xd] [cc] Electric Field
+%
+% XfnQP_E
+ 0.800000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%

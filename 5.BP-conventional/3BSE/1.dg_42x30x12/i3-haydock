@@ -1,0 +1,43 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+#       Version 5.1.0 Revision 19983 Hash 395c2b1cc                   
+#               Branch is devel-double-grid                           
+#                  MPI+SLK+HDF5_IO Build                              
+#                http://www.yambo-code.org                            
+#
+bss                              # [R] BSE solver
+optics                           # [R] Linear Response optical properties
+dipoles                          # [R] Oscillator strenghts (or dipoles)
+bse                              # [R][BSE] Bethe Salpeter Equation.
+BSEmod= "retarded"               # [BSE] resonant/retarded/coupling
+BSKmod= "SEX"                    # [BSE] IP/Hartree/HF/ALDA/SEX/BSfxc
+BSSmod= "h"                      # [BSS] (h)aydock/(d)iagonalization/(s)lepc/(i)nversion/(t)ddft`
+BSENGexx=  30 Ry    # [BSK] Exchange components
+BSENGBlk= 4 Ry     # [BSK] Screened interaction block size [if -1 uses all the G-vectors of W(q,G,Gp)]
+#WehCpl                        # [BSK] eh interaction included also in coupling
+BSEprop= "abs"                   # [BSS] abs/kerr/magn/dichr trace
+% BSEQptR
+ 1 | 1 |                             # [BSK] Transferred momenta range
+%
+% BSEBands
+   13 | 28 |                         # [BSK] Bands range
+%
+% BEnRange
+  0.00000 | 6.00000 |         eV    # [BSS] Energy range
+%
+% BDmRange
+ 0.040000 | 0.040000 |         eV    # [BSS] Damping range
+%
+BEnSteps= 601                    # [BSS] Energy steps
+% BLongDir
+ 0.000000 | 1.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+BSHayTrs=-0.020000               # [BSS] Relative [o/o] Haydock threshold. Strict(>0)/Average(<0)
